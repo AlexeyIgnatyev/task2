@@ -13,3 +13,19 @@ myApp.controller('Child', function ($scope) {
 		$scope.receivedMessage += data.message + '\n';
   	});
 });
+
+myApp.factory('fieldValue', function () {
+  return {data: '' }
+});
+
+myApp.controller('ctrl', function($scope,fieldValue){
+	$scope.text = '';
+	$scope.sendText = function(){
+		fieldValue.data += $scope.text + '\n';
+		$scope.text = '';
+	}
+});
+
+myApp.controller('ctrl2', function($scope,fieldValue){
+	$scope.selected2 = fieldValue;
+});

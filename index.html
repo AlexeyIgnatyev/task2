@@ -15,15 +15,26 @@
 	<body  ng-app="myApp" >
 		<div ng-controller="Parent">
 			<h3>Parent Controller</h3>	
-    		<p>Emitted message : {{emitedmessage}}</p>
     		<input type="text" ng-model="message" />
     		<button ng-click="sendMessage()">Send</button>
    		
 	    	<div ng-controller="Child">
-	      		<h3>Child controller</h3>
+	      		<h3>Child controller </h3>
 	      		<p>Received messages:</p>
 	      		<div>{{receivedMessage}}</div>
 	    	</div>
     	</div>
+    	<hr>
+
+		<div ng-controller="ctrl">	
+			<h3>Text something</h3>
+    		<input type="text" ng-model="text"/>
+    		<button ng-click="sendText()">Send</button>
+    	</div>	
+    	<div ng-controller="ctrl2">
+    		<p>Received:</p>
+      		{{selected2.data}}
+    	</div>
+
 	</body>
 </html>
